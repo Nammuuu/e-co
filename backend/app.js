@@ -83,10 +83,10 @@ app.use("/api/v2",cart);
 //     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 // }) 
 
- app.use(express.static(path.join(__dirname, "https://fabulous-hotteok-fed63e.netlify.app/")));
+ app.use(express.static(path.join(__dirname, "/opt/render/project/src/https:/fabulous-hotteok-fed63e.netlify.app")));
 
 app.get("*",(req,res) =>{
-    res.sendFile(path.resolve(__dirname, "https://fabulous-hotteok-fed63e.netlify.app/"));
+    res.sendFile(path.resolve(__dirname, "/opt/render/project/src/https:/fabulous-hotteok-fed63e.netlify.app"));
 }) 
 
 
