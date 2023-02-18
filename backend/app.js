@@ -77,11 +77,23 @@ app.use("/api/v2",order);
 
 app.use("/api/v2",cart);
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// app.get("*",(req,res) =>{
+//     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+// }) 
+
+ app.use(express.static(path.join(__dirname, "https://fabulous-hotteok-fed63e.netlify.app//build")));
 
 app.get("*",(req,res) =>{
-    res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+    res.sendFile(path.resolve(__dirname, "https://fabulous-hotteok-fed63e.netlify.app/build/index.html"));
 }) 
+
+
+
+https://fabulous-hotteok-fed63e.netlify.app/
+
+
  
 // it's for errorHandeling
 app.use(ErrorHandler);
